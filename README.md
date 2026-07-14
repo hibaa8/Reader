@@ -1,4 +1,4 @@
-# **Book Summarizer**
+# **Book Reader**
 
 A full-stack web application that enables users to browse books, view detailed summaries, and filter books by categories. Summaries are generated using generative AI models, providing engaging and insightful content.
 
