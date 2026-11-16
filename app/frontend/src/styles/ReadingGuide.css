@@ -1,6 +1,6 @@
 .reading-guide { color: var(--ink); }
 .guide-lead { padding: clamp(1.4rem, 4vw, 2.5rem); background: var(--blue-wash); border-radius: 10px; scroll-margin-top: 1rem; }
-.guide-deck { max-width: 19ch; margin: .7rem 0 1.3rem; font: 600 clamp(1.85rem, 3.5vw, 2.8rem)/1.16 Georgia, serif; letter-spacing: -.03em; }
+.guide-deck { max-width: 38ch; margin: .7rem 0 1.3rem; font: 600 clamp(1.45rem, 2.2vw, 2rem)/1.28 Georgia, serif; letter-spacing: -.02em; text-wrap: balance; }
 .guide-overview { max-width: 70ch; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1rem; }
 .guide-overview p { margin: 0; line-height: 1.55; color: var(--muted); }
 .guide-body { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); margin-top: 2.7rem; }
