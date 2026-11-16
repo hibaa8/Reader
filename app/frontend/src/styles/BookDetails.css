@@ -4,7 +4,7 @@
 .detail-status { min-height: 45vh; font: 600 1.5rem Georgia, serif; }
 .detail-hero { display: grid; grid-template-columns: minmax(180px, 280px) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
 .detail-overview { padding-top: .5rem; }
-.detail-overview h1 { font: 600 clamp(2rem, 3.6vw, 3.45rem)/1.12 Georgia, serif; letter-spacing: -.03em; margin: .65rem 0 1rem; text-wrap: balance; overflow-wrap: anywhere; }
+.detail-overview h1 { font: 600 clamp(1.85rem, 2.4vw, 2.35rem)/1.2 Georgia, serif; letter-spacing: -.02em; margin: .65rem 0 1rem; text-wrap: balance; overflow-wrap: anywhere; }
 .detail-author { color: var(--muted); font: 1.25rem/1.4 Georgia, serif; margin: 0 0 2.2rem; }
 .detail-meta { max-width: 65ch; font-size: .94rem; line-height: 1.55; margin: .5rem 0; color: var(--muted); }
 .detail-meta strong { color: var(--ink); margin-right: .6rem; }
@@ -37,7 +37,7 @@
     .detail-page { padding: 1.2rem 1rem 4rem; }
     .detail-hero { grid-template-columns: 1fr; gap: 2rem; }
     .detail-hero .book-cover { max-width: 210px; }
-    .detail-overview h1 { font-size: clamp(1.9rem, 7vw, 2.75rem); }
+    .detail-overview h1 { font-size: clamp(1.7rem, 6vw, 2.1rem); }
     .detail-summary { margin-top: 3rem; }
     .summary-outline ol { columns: 1; }
 }
