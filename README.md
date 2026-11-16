@@ -8,6 +8,13 @@ Book Reader is a Flask and React app for exploring book summaries from Project G
 - Listen with browser speech controls for voice, speed, and section.
 - Sign in to sync progress across devices using the same server.
 
+## Screenshots
+
+<p align="center">
+  <a href="docs/images/home.jpg"><img src="docs/images/home.jpg" alt="Book Reader library home page" width="420"></a>
+  <a href="docs/images/reading-guide.jpg"><img src="docs/images/reading-guide.jpg" alt="Alice's Adventures in Wonderland reading guide" width="420"></a>
+</p>
+
 ## Requirements
 
 - Python 3.10+
