@@ -1,0 +1,182 @@
+{
+  "8": {
+    "kind": "overview",
+    "source": "https://www.gutenberg.org/ebooks/100",
+    "deck": "A guide to Shakespeare's collected plays and poems, organized by the kinds of stories they tell.",
+    "overview": [
+      "This is a collection of separate works, not a single story with chapters.",
+      "Choose a play or poem to read in full; this overview helps you find a starting point."
+    ],
+    "takeaways": [
+      "The plays often test the gap between public roles and private motives.",
+      "Comedy, history, tragedy, and poetry use different forms to revisit love, power, and identity."
+    ],
+    "sections": [
+      {
+        "label": "Part 1",
+        "title": "Comedies",
+        "summary": "The comedies often begin with a social problem: lovers are separated, identities are concealed, or families impose rules that the young characters resist. Disguise and mistaken identity let people speak and act outside their usual roles. Many end with recognition, reconciliation, or marriage, although the path there can expose cruelty as well as wit.\n\nA reader can start with A Midsummer Night's Dream for its interlocking lovers and fairy world, or Much Ado About Nothing for its verbal sparring and the damage caused by rumor. The ending of a comedy restores order, but it may leave questions about how fair that order is."
+      },
+      {
+        "label": "Part 2",
+        "title": "Histories",
+        "summary": "The history plays turn English rulers and their rivals into dramatic characters. Claims to the crown, rebellion, loyalty, and war are made personal through arguments within families and courts. A ruler must perform authority in public while making choices under pressure in private. The plays are drama, not neutral records of the past.\n\nThe Richard II and Henry IV plays are useful entry points for the transfer of power and Prince Hal's movement toward kingship. Read the speeches alongside the actions: a character's account of honor or legitimacy may serve an immediate political purpose."
+      },
+      {
+        "label": "Part 3",
+        "title": "Tragedies",
+        "summary": "In the tragedies, an important choice or weakness grows into a wider catastrophe. Hamlet delays while trying to judge the truth of his father's death; Macbeth pursues a promised crown through murder; Othello lets manipulated suspicion overwhelm trust. Their stories do not reduce to one moral flaw. Other people, institutions, and chance shape the damage too.\n\nThese plays reward attention to what each character knows at a given moment. The audience often sees a gap between a claim and the evidence for it. That gap creates suspense and makes a disastrous decision understandable without excusing it."
+      },
+      {
+        "label": "Part 4",
+        "title": "Late plays and poems",
+        "summary": "The later plays often move through loss, apparent death, long separation, and unexpected reunion. The Tempest places a powerful magician's plan beside questions of forgiveness and control. The Winter's Tale asks whether repentance can repair harm done years earlier. Their endings can feel restorative while still acknowledging what cannot be undone.\n\nThe sonnets and longer poems use a different scale. They return to beauty, time, desire, jealousy, and the hope that writing can preserve someone or something. Read a poem as a speaker's shifting argument, rather than as a simple statement of Shakespeare's own beliefs."
+      }
+    ]
+  },
+  "42": {
+    "kind": "overview",
+    "source": "https://www.gutenberg.org/ebooks/1184",
+    "deck": "An innocent sailor escapes a political betrayal and returns with wealth, a new identity, and a plan for revenge.",
+    "overview": [
+      "Edmond Dantès gains the power to punish those who ruined his life, but cannot control every consequence.",
+      "This overview follows the novel's major movements rather than its many individual chapters."
+    ],
+    "takeaways": [
+      "Revenge can expose wrongdoing while harming people who did not commit it.",
+      "The novel keeps testing the difference between justice and personal power."
+    ],
+    "sections": [
+      {
+        "label": "Story arc 1",
+        "title": "A future taken away",
+        "summary": "Edmond Dantès returns to Marseille with a promising career at sea and plans to marry Mercédès. Danglars resents his advancement, Fernand wants Mercédès, and a false accusation makes Dantès appear linked to Napoleon's return from exile. Prosecutor Villefort discovers that the accusation threatens his own family and chooses to protect himself. Dantès is imprisoned without a fair chance to answer it.\n\nThe opening establishes the novel's central injustice before Edmond has the power to fight back. Each conspirator has a different motive, so the betrayal is more than a single villain's scheme. The people waiting for Edmond outside prison must live with the consequences of a decision they cannot see."
+      },
+      {
+        "label": "Story arc 2",
+        "title": "Prison, learning, and escape",
+        "summary": "At the Château d'If, Dantès nearly gives up hope. He meets Abbé Faria, another prisoner, who teaches him languages, history, science, and the political story behind his arrest. Faria also tells him of a hidden fortune on the island of Monte Cristo. After Faria dies, Dantès uses the burial shroud to escape and eventually finds the treasure.\n\nThe prison years change him as much as the money does. Faria gives him knowledge and a way to interpret the betrayal; the treasure gives him the means to act on that interpretation. Freedom arrives with a purpose so consuming that it begins to define his new life."
+      },
+      {
+        "label": "Story arc 3",
+        "title": "The Count enters society",
+        "summary": "Dantès reappears under several identities, most famously the Count of Monte Cristo. He quietly rewards people who helped him, including the Morrel family, while studying the fortunes his enemies have built. In Paris, the Count becomes a fascinating outsider whose wealth and connections open doors. Those doors also give him access to the secrets and weaknesses of Danglars, Fernand, and Villefort.\n\nHis elaborate plans depend on patience and performance. People see the title, fortune, and manners he presents, rarely the former sailor behind them. The same skill that lets him arrange justice also makes it difficult for anyone to challenge his judgment."
+      },
+      {
+        "label": "Story arc 4",
+        "title": "Revenge spreads",
+        "summary": "The Count sets events in motion that reveal Fernand's past, shake Danglars's finances, and bring Villefort's hidden family history into public view. Their own choices contribute to their downfall. Yet spouses, children, and other dependents are caught in the same web. The Count's careful calculations cannot make every outcome proportionate or keep innocent people safe.\n\nAs the plans unfold, the novel shifts from the satisfaction of exposing corruption to the cost of trying to direct whole lives. The Count must face evidence that his power is limited, even when his information and wealth seem almost limitless."
+      },
+      {
+        "label": "Story arc 5",
+        "title": "The limits of judgment",
+        "summary": "The destruction around Villefort forces the Count to question whether he has claimed too much authority over other people's fates. He helps Valentine and Maximilien, whose love offers a future beyond the old grievance, and releases Haydée from any obligation to stay with him. Their choices matter in the ending as much as his own.\n\nDantès does not simply return to the life stolen from him. The novel closes by moving from punishment toward the possibility of hope, without pretending that revenge has repaired every loss. His final lesson is bound to restraint: having the means to act does not make every act right."
+      }
+    ]
+  },
+  "65": {
+    "kind": "overview",
+    "source": "https://www.gutenberg.org/ebooks/5740",
+    "deck": "Seven numbered propositions ask how language can represent the world, and where meaningful speech reaches its limit.",
+    "overview": [
+      "The numbering is the book's structure; shorter decimal propositions develop the seven main claims.",
+      "This is a reading aid to a dense philosophical argument, not a substitute for its exact wording."
+    ],
+    "takeaways": [
+      "A proposition matters through the possible state of affairs it presents.",
+      "The book ends by asking readers to recognize limits to what its own sentences can say."
+    ],
+    "sections": [
+      {
+        "label": "Propositions 1–2",
+        "title": "World, facts, and states of affairs",
+        "summary": "Wittgenstein begins by saying that the world is all that is the case. He treats it as a totality of facts rather than a heap of objects. A fact is an existing state of affairs: objects stand in a particular relation, and that arrangement might have been otherwise. The distinction makes possibility central to the book.\n\nIf the world consisted only of named things, a list of names might describe it. But to say what happens, a sentence must present how things are combined. The early propositions prepare his account of how a meaningful sentence can picture a possible situation."
+      },
+      {
+        "label": "Propositions 3–4",
+        "title": "Thought and proposition",
+        "summary": "A thought is a logical picture of facts. A proposition gives a perceptible expression to a thought, and its parts must be arranged in a way that can correspond to a possible arrangement in the world. A proposition has sense when we understand what would make it true or false. Its form cannot be supplied by a mere list of words.\n\nThis account does not mean that a sentence visually resembles its subject. The comparison is logical: the elements of an expression can relate to one another as the elements of the pictured situation might. To understand a proposition is to know the possibility it sets before us."
+      },
+      {
+        "label": "Proposition 5",
+        "title": "Truth and logical form",
+        "summary": "Wittgenstein describes propositions as truth-functions of elementary propositions. Complex claims can be analyzed by asking how their truth depends on simpler claims. Logic reveals the forms of combination that remain valid regardless of which particular facts obtain. A tautology, for example, tells us nothing about how the world happens to be, though its form is useful.\n\nThis part of the book is technical, but its purpose follows from the earlier picture account. The logical structure of language sets the conditions under which a proposition can agree or disagree with reality. Logic does not add another fact to the world."
+      },
+      {
+        "label": "Proposition 6",
+        "title": "Science and the limits of saying",
+        "summary": "The sixth proposition develops the general form of a truth-function and then turns to what propositions can express. Natural science concerns propositions that describe possible facts. Questions of value, ethics, and the meaning of life do not fit neatly into that same descriptive form. Wittgenstein does not dismiss their importance; he argues that their importance cannot be captured as another ordinary fact.\n\nNear the end, he asks readers to see his own explanatory propositions as a ladder to be climbed and then discarded. That striking image warns against treating the book's account of limits as a new set of facts beyond those limits."
+      },
+      {
+        "label": "Proposition 7",
+        "title": "Silence",
+        "summary": "The final proposition says that where one cannot speak, one must be silent. It condenses the book's attempt to draw a boundary around meaningful propositions. On this account, language can represent possible facts, but it cannot straightforwardly state the logical form that makes representation possible or turn ethical value into an observable property.\n\nThe ending is deliberately difficult. It does not say that readers should stop caring about value, art, or philosophical questions. It asks them to distinguish what can be clearly said from what may only show itself in the way language and life are used."
+      }
+    ]
+  },
+  "84": {
+    "kind": "overview",
+    "source": "https://www.gutenberg.org/ebooks/31552",
+    "deck": "A historical Portuguese dictionary to consult by entry, with a preface that explains its approach to the language.",
+    "overview": [
+      "A dictionary has entries rather than a continuous plot or argument.",
+      "Its spellings and usage reflect the edition's time; consult a current dictionary for modern standards."
+    ],
+    "takeaways": [
+      "Use an entry as evidence of recorded usage, not an automatic rule for present-day writing.",
+      "The preface is useful for understanding the compiler's choices and the historical context."
+    ],
+    "sections": [
+      {
+        "label": "How to read it",
+        "title": "A reference work, not a story",
+        "summary": "Cândido de Figueiredo's Novo dicionário da língua portuguesa is arranged for looking up words. Its main body is a sequence of entries rather than chapters to read from beginning to end. The useful question is usually specific: how does this edition define a term, spell it, or place it among related forms? Start with a word and compare its entry with the surrounding material.\n\nBecause the work is historical, it can also show how a word was presented at the time of publication. That is valuable for reading older Portuguese texts, even when a modern dictionary would give a different spelling or sense."
+      },
+      {
+        "label": "The preface",
+        "title": "The compiler's method",
+        "summary": "The preface explains that the dictionary aims to record a broad vocabulary and argues about how a language should be documented. Figueiredo refers to evidence from reading and usage, and he addresses questions of spelling and grammar. These remarks show that a dictionary is built through choices: which forms to include, how to label them, and which authorities to trust.\n\nRead the preface before relying heavily on the entries. It helps separate the compiler's descriptive evidence from his opinions about proper language. It also makes clear why a historical dictionary may disagree with a current reference book."
+      },
+      {
+        "label": "Using entries",
+        "title": "Definitions in context",
+        "summary": "An entry offers a compact account of a word, so context still matters. A term can have more than one sense, and an older example may use a meaning that is uncommon today. If an entry seems surprising, inspect nearby forms and compare the word's use in the text that sent you to the dictionary.\n\nThe online edition is most helpful as a searchable record of this particular work. It cannot settle every question about modern usage, regional variation, or later language change. Treat it as one historical source among several when precision matters."
+      }
+    ]
+  },
+  "91": {
+    "kind": "overview",
+    "source": "https://www.gutenberg.org/ebooks/38769",
+    "deck": "G. H. Hardy builds calculus on careful definitions of numbers, functions, limits, and infinite processes.",
+    "overview": [
+      "This is a mathematics textbook; examples and proofs are essential to the argument.",
+      "Use the overview to choose a topic, then work through the source rather than relying on a verbal summary."
+    ],
+    "takeaways": [
+      "A precise definition is the starting point for a reliable proof.",
+      "Limits connect real numbers and functions to differentiation, integration, and series."
+    ],
+    "sections": [
+      {
+        "label": "Foundations",
+        "title": "Real numbers and variables",
+        "summary": "Hardy begins with real variables and the number system in which analysis takes place. Rational numbers alone leave gaps; irrational numbers and the continuum require careful description. The opening chapters develop order, magnitude, and properties of the real line that later arguments depend on. Familiar calculations become objects of proof rather than assumptions.\n\nThe point of this foundation is practical as well as formal. When a later limit or series seems plausible, its proof must rest on properties of real numbers that have actually been established. The exercises make those distinctions concrete."
+      },
+      {
+        "label": "Functions",
+        "title": "From formulas to behavior",
+        "summary": "The book introduces functions of real variables and their graphical representation, then studies familiar algebraic and transcendental examples. A function is more than a formula on a page: its domain, values, and behavior near a point matter. This shift prepares the reader to ask precise questions about continuity and change.\n\nGraphs can suggest an answer, but Hardy repeatedly pushes the reader toward an argument that explains why it is true. The distinction becomes important when a function behaves unexpectedly or when a familiar rule has hidden conditions."
+      },
+      {
+        "label": "Calculus",
+        "title": "Limits, derivatives, and integrals",
+        "summary": "Limits provide a language for describing what happens as a variable approaches a value. On that basis, differentiation studies local rates of change and integration studies accumulated quantities. Hardy develops these ideas through definitions and theorems, with examples that show when the usual computational rules apply. The book asks readers to understand the reason behind a calculation.\n\nA derivative or integral is not merely a technique to memorize. Its existence can depend on continuity, differentiability, and other conditions. Checking those conditions is part of the mathematical work, especially outside the most familiar examples."
+      },
+      {
+        "label": "Infinite processes",
+        "title": "Sequences and series",
+        "summary": "Infinite sequences and series make questions of convergence unavoidable. Adding indefinitely many terms is meaningful only when the partial sums approach a definite limit. Tests and examples help distinguish a convincing pattern from a valid conclusion. The same care applies to power series and the representation of functions by infinite expansions.\n\nThis material shows the book's larger method: begin with a definition, state the conditions of a theorem, and test the result against examples. Readers learn analysis by following the proofs and attempting the exercises, not by reading the conclusions alone."
+      }
+    ]
+  }
+}

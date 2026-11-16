@@ -89,7 +89,12 @@ class AuthAndProgressTests(unittest.TestCase):
         self.assertFalse(listed[1]['has_guide'])
         self.assertGreater(len(self.client.get('/api/books/1').json['guide']['sections']), 0)
         self.assertFalse(self.client.get('/api/books/1').json['guide']['reviewed'])
-        self.assertIsNone(self.client.get('/api/books/8').json['guide'])
+        for book_id in (8, 42, 65, 84, 91):
+            with self.subTest(overview_id=book_id):
+                book = self.client.get(f'/api/books/{book_id}').json
+                self.assertEqual(book['guide']['kind'], 'overview')
+                self.assertGreaterEqual(len(book['guide']['sections']), 3)
+                self.assertFalse(book['summary_reviewed'])
 
 
 if __name__ == '__main__':

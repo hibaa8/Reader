@@ -13,6 +13,9 @@ READING_GUIDES = json.loads(
 ADDED_BOOKS = json.loads(
     (Path(__file__).resolve().parents[1] / 'data' / 'added_books.json').read_text(encoding='utf-8')
 )
+OVERVIEW_GUIDES = json.loads(
+    (Path(__file__).resolve().parents[1] / 'data' / 'overview_guides.json').read_text(encoding='utf-8')
+)
 
 
 def gutenberg_url(image_url):
@@ -76,8 +79,10 @@ class DatabaseHandler:
                  'image_url': book.image_url, 'amazon_url': book.amazon_url}
                 if book else {key: value for key, value in added.items() if key != 'gutenberg_id'})
         reviewed = READING_GUIDES.get(str(book_id))
-        guide = dict(reviewed, reviewed=True) if reviewed else legacy_guide(
-            book.title, book.summary, gutenberg_url(book.image_url)) if book else None
+        overview = OVERVIEW_GUIDES.get(str(book_id))
+        guide = (dict(reviewed, reviewed=True) if reviewed else
+                 dict(overview, reviewed=False) if overview else
+                 legacy_guide(book.title, book.summary, gutenberg_url(book.image_url)) if book else None)
         source_url = (guide['source'] if guide else
                       gutenberg_url(book.image_url) if book else
                       f"https://www.gutenberg.org/ebooks/{added['gutenberg_id']}")

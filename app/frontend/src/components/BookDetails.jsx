@@ -107,7 +107,7 @@ export default function BookDetails() {
                 <section className="detail-hero" aria-labelledby="book-title">
                     <BookCover key={book.id} book={book} large />
                     <div className="detail-overview">
-                        <span className="eyebrow">{book.summary_reviewed ? 'READING GUIDE' : 'BOOK SUMMARY'}</span>
+                        <span className="eyebrow">{book.summary_reviewed ? 'READING GUIDE' : book.guide?.kind === 'overview' ? 'BOOK OVERVIEW' : 'BOOK SUMMARY'}</span>
                         <h1 id="book-title">{book.title}</h1>
                         <p className="detail-author">by {book.author}</p>
                         <p className="detail-meta"><strong>Language</strong> {book.language}</p>
@@ -127,9 +127,10 @@ export default function BookDetails() {
                     </div>
                 </section>
                 <article className={`detail-summary${book.guide ? ' guide-mode' : ''}`} aria-labelledby="summary-title">
-                    <div className="summary-heading"><h2 id="summary-title">{book.summary_reviewed ? 'The reading guide' : book.guide ? 'The summary' : 'Summary unavailable'}</h2><span>{entry?.completed ? 'Finished' : `${Math.round(Math.max(currentPercent, entry?.percent || 0))}% read`}</span></div>
+                    <div className="summary-heading"><h2 id="summary-title">{book.summary_reviewed ? 'The reading guide' : book.guide?.kind === 'overview' ? 'The book overview' : book.guide ? 'The summary' : 'Summary unavailable'}</h2><span>{entry?.completed ? 'Finished' : `${Math.round(Math.max(currentPercent, entry?.percent || 0))}% read`}</span></div>
                     <p className="summary-note">{book.summary_reviewed
                         ? `${book.guide.sections.length} source-aligned ${book.guide.sections[0]?.label.startsWith('Act') ? 'acts' : book.guide.sections[0]?.label.startsWith('Stave') ? 'staves' : 'chapters'} · Original text linked above · Editorial summary, not the full book`
+                        : book.guide?.kind === 'overview' ? `${book.guide.sections.length} overview sections · A guide to the work's main ideas or structure · Original text linked above`
                         : book.guide ? `${book.guide.sections.length} summary sections · This earlier text has not been checked against the original edition; sections may combine chapters.`
                             : 'A summary for this title is not available yet. You can read the original using the link above.'}</p>
                     {book.guide && <div ref={summaryRef}><ReadingGuide guide={book.guide} /></div>}
