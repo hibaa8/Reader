@@ -10,10 +10,13 @@ Book Reader is a Flask and React app for exploring book summaries from Project G
 
 ## Screenshots
 
-<p align="center">
-  <a href="docs/images/home.jpg"><img src="docs/images/home.jpg" alt="Book Reader library home page" width="420"></a>
-  <a href="docs/images/reading-guide.jpg"><img src="docs/images/reading-guide.jpg" alt="Alice's Adventures in Wonderland reading guide" width="420"></a>
-</p>
+**Library**
+
+<a href="docs/images/home.jpg"><img src="docs/images/home.jpg" alt="Book Reader library home page" width="600"></a>
+
+**Alice's Adventures in Wonderland — chapter summaries**
+
+<a href="docs/images/reading-guide.jpg"><img src="docs/images/reading-guide.jpg" alt="Alice's Adventures in Wonderland chapter summaries" width="600"></a>
 
 ## Requirements
 
