@@ -1,54 +1,22 @@
-import { useState, useEffect } from 'react';
-import Fuse from 'fuse.js';
+import { useMemo, useState } from 'react';
 
 export const useFilteredBooks = (books, popularCategories) => {
-    const [filteredBooks, setFilteredBooks] = useState([]);
     const [selectedFilters, setSelectedFilters] = useState([]);
+    const knownCategories = useMemo(() => popularCategories
+        .map((category) => category.toLowerCase())
+        .filter((category) => category !== 'other'), [popularCategories]);
 
-    useEffect(() => {
-        setFilteredBooks(books); 
-    }, [books]);
-
-    const handleFilter = (selectedCategories) => {
-        setSelectedFilters(selectedCategories);
-
-        const popularCategoriesLowercase = popularCategories
-            .filter((category) => category.toLowerCase() !== 'other')
-            .map((category) => category.toLowerCase());
-
-        const fuse = new Fuse(popularCategoriesLowercase, {
-            includeScore: true,
-            threshold: 0.4,
+    const filteredBooks = useMemo(() => {
+        if (selectedFilters.length === 0) return books;
+        return books.filter((book) => {
+            const subjects = (book.subject || '').toLowerCase().split(',').map((subject) => subject.trim());
+            const matchesSelected = selectedFilters.some((filter) =>
+                filter !== 'other' && subjects.some((subject) => subject.includes(filter)));
+            const matchesOther = selectedFilters.includes('other') &&
+                !subjects.some((subject) => knownCategories.some((category) => subject.includes(category)));
+            return matchesSelected || matchesOther;
         });
+    }, [books, selectedFilters, knownCategories]);
 
-        const filtered = selectedCategories.includes('other')
-            ? books.filter((book) => {
-                  const categories = book.subject
-                      ?.split(',')
-                      .map((cat) => cat.trim().toLowerCase());
-                  return !categories.some((cat) =>
-                      popularCategories.some((filterCategory) =>
-                          cat.includes(filterCategory.toLowerCase()) ||
-                          fuse.search(cat).some((result) => result.item.toLowerCase() === filterCategory.toLowerCase())
-                      )
-                  );
-              })
-            : selectedCategories.length
-            ? books.filter((book) => {
-                  const categories = book.subject
-                      ?.split(',')
-                      .map((cat) => cat.trim().toLowerCase());
-                  return categories.some((cat) =>
-                      selectedCategories.some((filterCategory) =>
-                          cat.includes(filterCategory.toLowerCase()) ||
-                          fuse.search(cat).some((result) => result.item.toLowerCase() === filterCategory.toLowerCase())
-                      )
-                  );
-              })
-            : books;
-
-        setFilteredBooks(filtered);
-    };
-
-    return { filteredBooks, selectedFilters, handleFilter };
+    return { filteredBooks, handleFilter: setSelectedFilters };
 };

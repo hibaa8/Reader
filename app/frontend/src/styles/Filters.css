@@ -1,37 +1,24 @@
-
-.filters {
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-right: 1px solid #ddd;
-    max-width: 300px;
-    min-width: 200px;
-    flex-shrink: 0; 
+.filters { margin: 2rem 0 1.4rem; }
+.filters-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.filters h2 { font: 600 1.2rem/1.25 Georgia, serif; margin: 0 0 .8rem; }
+.filter-list { display: flex; flex-wrap: wrap; gap: .55rem; }
+.filter-chip, .filters-clear {
+    font: inherit;
+    cursor: pointer;
 }
-
-.filters h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.filter-chip {
+    min-height: 44px;
+    padding: .42rem .8rem;
+    color: var(--navy);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
 }
-
-.filter-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.filter-item input {
-    margin-right: 0.5rem;
-}
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column; 
-    }
-
-    .filters {
-        max-width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #ddd; 
-        align-items: center; 
-    }
+.filter-chip:hover, .filter-chip:focus-visible { border-color: var(--blue); }
+.filter-chip.is-selected { color: white; background: var(--blue); border-color: var(--blue); }
+.filters-clear { color: var(--blue); border: 0; background: none; text-decoration: underline; }
+@media (max-width: 600px) {
+    .filter-list { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .45rem; scrollbar-width: thin; }
+    .filter-chip { flex: none; }
 }
