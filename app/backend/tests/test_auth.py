@@ -50,7 +50,8 @@ class AuthAndProgressTests(unittest.TestCase):
         })
         self.csrf = response.json['csrfToken']
         self.assertEqual(self.mutate('/api/progress/1', {'percent': 37.5, 'completed': False}, method='put').status_code, 200)
-        self.assertEqual(self.client.get('/api/progress').json[0]['percent'], 37.5)
+        self.assertEqual(next(row['percent'] for row in self.client.get('/api/progress').json if row['bookId'] == 1), 37.5)
+        self.assertEqual(self.mutate('/api/progress/100', {'percent': 42, 'completed': False}, method='put').status_code, 200)
         self.assertEqual(self.mutate('/api/progress/1', {'percent': 400, 'completed': False}, method='put').status_code, 400)
         self.assertEqual(self.mutate('/api/progress/99999', {'percent': 1, 'completed': False}, method='put').status_code, 404)
         other = self.app.test_client()
@@ -70,8 +71,10 @@ class AuthAndProgressTests(unittest.TestCase):
         self.assertEqual(response.json[0]['percent'], 60)
 
     def test_source_guides_and_archive_labels(self):
-        expected = {10: (11, 12), 23: (46, 5), 16: (64317, 9), 29: (43, 10), 28: (844, 3), 24: (2542, 3)}
+        expected = {10: (11, 12), 23: (46, 5), 16: (64317, 9), 29: (43, 10), 28: (844, 3), 24: (2542, 3),
+                    100: (215, 7), 101: (35, 16), 102: (289, 12), 103: (14522, 7)}
         listed = {book['id']: book for book in self.client.get('/api/books').json}
+        self.assertEqual(len(listed), 103)
         for book_id, (gutenberg_id, sections) in expected.items():
             with self.subTest(book_id=book_id):
                 book = self.client.get(f'/api/books/{book_id}').json
@@ -84,6 +87,9 @@ class AuthAndProgressTests(unittest.TestCase):
                 self.assertTrue(listed[book_id]['has_guide'])
         self.assertFalse(self.client.get('/api/books/1').json['summary_reviewed'])
         self.assertFalse(listed[1]['has_guide'])
+        self.assertGreater(len(self.client.get('/api/books/1').json['guide']['sections']), 0)
+        self.assertFalse(self.client.get('/api/books/1').json['guide']['reviewed'])
+        self.assertIsNone(self.client.get('/api/books/8').json['guide'])
 
 
 if __name__ == '__main__':

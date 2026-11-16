@@ -1,0 +1,42 @@
+{
+  "100": {
+    "id": 100,
+    "gutenberg_id": 215,
+    "title": "The Call of the Wild",
+    "author": "London, Jack",
+    "language": "English",
+    "subject": "Adventure stories, Dogs -- Fiction, Klondike River Valley -- Fiction",
+    "image_url": null,
+    "amazon_url": null
+  },
+  "101": {
+    "id": 101,
+    "gutenberg_id": 35,
+    "title": "The Time Machine",
+    "author": "Wells, H. G. (Herbert George)",
+    "language": "English",
+    "subject": "Science fiction, Time travel -- Fiction, Dystopian fiction",
+    "image_url": null,
+    "amazon_url": null
+  },
+  "102": {
+    "id": 102,
+    "gutenberg_id": 289,
+    "title": "The Wind in the Willows",
+    "author": "Grahame, Kenneth",
+    "language": "English",
+    "subject": "Fantasy fiction, Animals -- Fiction, Friendship -- Fiction, River life -- Fiction",
+    "image_url": null,
+    "amazon_url": null
+  },
+  "103": {
+    "id": 103,
+    "gutenberg_id": 14522,
+    "title": "The Canterville Ghost",
+    "author": "Wilde, Oscar",
+    "language": "English",
+    "subject": "Ghost stories, Humorous stories, England -- Fiction",
+    "image_url": null,
+    "amazon_url": null
+  }
+}

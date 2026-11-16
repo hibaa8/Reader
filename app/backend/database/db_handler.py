@@ -4,10 +4,14 @@ from flask import jsonify
 import re
 import json
 from pathlib import Path
+from .legacy_guides import legacy_guide
 
 
 READING_GUIDES = json.loads(
     (Path(__file__).resolve().parents[1] / 'data' / 'reading_guides.json').read_text(encoding='utf-8')
+)
+ADDED_BOOKS = json.loads(
+    (Path(__file__).resolve().parents[1] / 'data' / 'added_books.json').read_text(encoding='utf-8')
 )
 
 
@@ -56,23 +60,31 @@ class DatabaseHandler:
                 }
                 for book in books
         ]
+        books_data.extend({
+            **{key: value for key, value in book.items() if key != 'gutenberg_id'},
+            'has_guide': str(book['id']) in READING_GUIDES,
+        } for book in ADDED_BOOKS.values() if not subject or subject.lower() in book['subject'].lower())
         return jsonify(books_data)
 
     def get_book_by_id(self, book_id):
         book = db.session.get(Book, book_id)
-        if book is None:
+        added = ADDED_BOOKS.get(str(book_id))
+        if book is None and added is None:
             return jsonify({"error": "Book not found"}), 404
-        guide = READING_GUIDES.get(str(book.id))
+        data = ({'id': book.id, 'title': book.title, 'author': book.author,
+                 'language': book.language, 'subject': book.subject,
+                 'image_url': book.image_url, 'amazon_url': book.amazon_url}
+                if book else {key: value for key, value in added.items() if key != 'gutenberg_id'})
+        reviewed = READING_GUIDES.get(str(book_id))
+        guide = dict(reviewed, reviewed=True) if reviewed else legacy_guide(
+            book.title, book.summary, gutenberg_url(book.image_url)) if book else None
+        source_url = (guide['source'] if guide else
+                      gutenberg_url(book.image_url) if book else
+                      f"https://www.gutenberg.org/ebooks/{added['gutenberg_id']}")
         return jsonify({
-            "id": book.id,
-            "title": book.title,
-            "author": book.author,
-            "language": book.language,
-            "subject": book.subject,
-            "image_url": book.image_url,
-            "amazon_url": book.amazon_url,
-            "source_url": guide['source'] if guide else gutenberg_url(book.image_url),
-            "summary": None if guide else book.summary,
+            **data,
+            "source_url": source_url,
+            "summary": None,
             "guide": guide,
-            "summary_reviewed": bool(guide),
+            "summary_reviewed": bool(reviewed),
         })

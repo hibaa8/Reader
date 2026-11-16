@@ -12,6 +12,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from .database import db
 from .database.models import AuthThrottle, Book, ReadingProgress, User
+from .database.db_handler import ADDED_BOOKS
 
 
 auth = Blueprint('auth', __name__)
@@ -170,7 +171,7 @@ def save_progress(book_id):
     user, error = authenticated()
     if error:
         return error
-    if db.session.get(Book, book_id) is None:
+    if db.session.get(Book, book_id) is None and str(book_id) not in ADDED_BOOKS:
         return jsonify({'error': 'Book not found'}), 404
     value = validated_progress(request.get_json(silent=True))
     if value is None:
@@ -195,7 +196,7 @@ def import_progress():
     data = request.get_json(silent=True)
     if not isinstance(data, list) or len(data) > 150:
         return jsonify({'error': 'Invalid progress list'}), 400
-    valid_ids = {book.id for book in Book.query.with_entities(Book.id).all()}
+    valid_ids = {book.id for book in Book.query.with_entities(Book.id).all()} | {int(book_id) for book_id in ADDED_BOOKS}
     for item in data:
         if not isinstance(item, dict) or type(item.get('bookId')) is not int or item['bookId'] not in valid_ids:
             return jsonify({'error': 'Invalid progress list'}), 400

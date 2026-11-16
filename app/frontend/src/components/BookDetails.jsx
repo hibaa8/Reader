@@ -7,7 +7,6 @@ import ReadingGuide from './ReadingGuide';
 import { useReadingHistory } from '../hooks/useReadingHistory';
 import { useSummarySpeech } from '../hooks/useSummarySpeech';
 import { useLibrary } from '../LibraryContext';
-import { structureSummary } from '../summaryStructure';
 import '../styles/BookDetails.css';
 
 export default function BookDetails() {
@@ -19,14 +18,13 @@ export default function BookDetails() {
     const { readIds, toggleRead } = useReadingHistory();
     const { progress, saveProgress, sessionReady } = useLibrary();
     const structured = useMemo(() => {
-        if (!book) return { html: '', sections: [] };
-        if (!book.guide) return structureSummary(book.summary);
+        if (!book?.guide) return { sections: [] };
         const guide = book.guide;
-        return { html: '', sections: [
-            { id: 'guide-overview', title: 'Quick take', text: `${guide.deck} ${guide.overview.join(' ')}` },
+        return { sections: [
+            { id: 'guide-overview', title: guide.reviewed ? 'Quick take' : 'At a glance', text: `${guide.deck} ${guide.overview.join(' ')}` },
             ...guide.sections.map((section, index) => ({ id: `guide-section-${index}`, title: section.label,
                 text: `${section.label}. ${section.title}. ${section.summary}` })),
-            { id: 'guide-takeaways', title: 'Key ideas', text: guide.takeaways.join(' ') },
+            ...(guide.takeaways.length ? [{ id: 'guide-takeaways', title: 'Key ideas', text: guide.takeaways.join(' ') }] : []),
         ] };
     }, [book]);
     const speech = useSummarySpeech(id, structured.sections);
@@ -109,7 +107,7 @@ export default function BookDetails() {
                 <section className="detail-hero" aria-labelledby="book-title">
                     <BookCover key={book.id} book={book} large />
                     <div className="detail-overview">
-                        <span className="eyebrow">{book.guide ? 'READING GUIDE' : 'BOOK SUMMARY'}</span>
+                        <span className="eyebrow">{book.summary_reviewed ? 'READING GUIDE' : 'BOOK SUMMARY'}</span>
                         <h1 id="book-title">{book.title}</h1>
                         <p className="detail-author">by {book.author}</p>
                         <p className="detail-meta"><strong>Language</strong> {book.language}</p>
@@ -121,7 +119,7 @@ export default function BookDetails() {
                             {entry?.percent > 0 && !entry.completed && <button type="button" onClick={() => scrollToSaved(entry.percent)}>Continue at {Math.round(entry.percent)}%</button>}
                         </div>
                         {progressError && <p role="alert" className="progress-error">{progressError}</p>}
-                        <AudioPlayer speech={speech} sections={structured.sections} guide={Boolean(book.guide)} />
+                        <AudioPlayer speech={speech} sections={structured.sections} guide={book.summary_reviewed} />
                         <div className="source-links">
                             {sourceUrl && <a href={sourceUrl} target="_blank" rel="noopener noreferrer">Read the original on Gutenberg ↗</a>}
                             {amazonUrl && <a href={amazonUrl} target="_blank" rel="noopener noreferrer">Find a copy on Amazon ↗</a>}
@@ -129,17 +127,12 @@ export default function BookDetails() {
                     </div>
                 </section>
                 <article className={`detail-summary${book.guide ? ' guide-mode' : ''}`} aria-labelledby="summary-title">
-                    <div className="summary-heading"><h2 id="summary-title">{book.guide ? 'The reading guide' : 'Archive summary'}</h2><span>{entry?.completed ? 'Finished' : `${Math.round(Math.max(currentPercent, entry?.percent || 0))}% read`}</span></div>
-                    {!book.guide && structured.sections.length > 1 && <nav className="summary-outline" aria-label="Summary sections">
-                        <h3>In this summary</h3>
-                        <ol>{structured.sections.map((section) => <li key={section.id}><a href={`#${section.id}`}>{section.title}</a></li>)}</ol>
-                    </nav>}
-                    <p className="summary-note">{book.guide
+                    <div className="summary-heading"><h2 id="summary-title">{book.summary_reviewed ? 'The reading guide' : book.guide ? 'The summary' : 'Summary unavailable'}</h2><span>{entry?.completed ? 'Finished' : `${Math.round(Math.max(currentPercent, entry?.percent || 0))}% read`}</span></div>
+                    <p className="summary-note">{book.summary_reviewed
                         ? `${book.guide.sections.length} source-aligned ${book.guide.sections[0]?.label.startsWith('Act') ? 'acts' : book.guide.sections[0]?.label.startsWith('Stave') ? 'staves' : 'chapters'} · Original text linked above · Editorial summary, not the full book`
-                        : 'This older summary has not yet been rechecked against the source. Its sections may combine original chapters.'}</p>
-                    {book.guide ? <div ref={summaryRef}><ReadingGuide guide={book.guide} /></div> : structured.html
-                        ? <div className="book-summary" ref={summaryRef} dangerouslySetInnerHTML={{ __html: structured.html }} />
-                        : <p>No summary is available for this book yet.</p>}
+                        : book.guide ? `${book.guide.sections.length} summary sections · This earlier text has not been checked against the original edition; sections may combine chapters.`
+                            : 'A summary for this title is not available yet. You can read the original using the link above.'}</p>
+                    {book.guide && <div ref={summaryRef}><ReadingGuide guide={book.guide} /></div>}
                 </article>
             </>}
         </main>

@@ -306,5 +306,283 @@
     ],
     "mirror": "https://github.com/GITenberg/A-Doll-s-House---a-play_2542/blob/master/2542.txt",
     "source_sha256": "85c176302c06d8e94072fac676b4b4cb98541ecd1443ab488d3c3d6771b931b1"
+  },
+  "100": {
+    "source": "https://www.gutenberg.org/ebooks/215",
+    "mirror": "https://github.com/GITenberg/The-Call-of-the-Wild_215/blob/master/215-0.txt",
+    "source_sha256": "7b3e855dbc4e9833b0281a0bc1d527379d85c14f8dfb389ef916022d6e4d888c",
+    "deck": "A stolen dog learns the rules of the northern trail, then hears a life beyond them calling.",
+    "overview": [
+      "Buck begins as a comfortable California pet and becomes a powerful sled dog in the Klondike.",
+      "His bond with John Thornton gives him a reason to stay with people even as the wilderness draws him away."
+    ],
+    "takeaways": [
+      "Survival changes Buck through experience rather than a single sudden transformation.",
+      "The novel pairs brutality on the trail with a genuine bond between Buck and Thornton.",
+      "The final call is a choice of belonging as well as an escape from human ownership."
+    ],
+    "sections": [
+      {
+        "label": "Chapter I",
+        "title": "Into the Primitive",
+        "summary": "Buck lives on Judge Miller’s California estate until the gardener’s helper Manuel sells him. Taken north during the gold rush, he fights his captors and is beaten by a man with a club. Buck learns that human authority can be enforced by force even when he believes himself in the right.\n\nHe is sold to Perrault and François, who need strong dogs for the mail trail. His first encounter with snow is bewildering. Everything familiar about his old life—warmth, safety, and the assumption that people will protect him—has been removed."
+      },
+      {
+        "label": "Chapter II",
+        "title": "The Law of Club and Fang",
+        "summary": "Buck’s first days among the sled dogs teach him how quickly weakness can be punished. He sees Curly killed by a pack after she falls in a fight, and he understands that there is no pause for mercy on the trail. Spitz, the lead dog, becomes his particular enemy.\n\nBuck learns to sleep under snow, steal food, and pull in harness. He does not simply become savage; he becomes observant and adaptable. The skills that once served him as a household dog are replaced by habits suited to cold and competition."
+      },
+      {
+        "label": "Chapter III",
+        "title": "The Dominant Primordial Beast",
+        "summary": "As the team travels, Buck and Spitz compete for authority. Buck grows stronger and more calculating, undermining Spitz while waiting for a direct contest. A chase after a snowshoe rabbit brings the rivalry to its end when the two dogs fight before the team.\n\nBuck defeats Spitz and takes his place as the dominant dog. The victory is more than a change in rank: Buck has learned to act with the instincts and patience that the trail rewards. His earlier life has become a distant memory."
+      },
+      {
+        "label": "Chapter IV",
+        "title": "Who Has Won to Mastership",
+        "summary": "François first tries to put another dog at the front, but Buck refuses every position except the lead. Once there, he drives the team with speed and discipline. The mail route remains punishing, and the dogs are handed to a new driver after weeks of hard travel.\n\nDave, a dog who lives for his work in the traces, becomes too sick to continue. Attempts to let him rest only distress him; he is allowed back into harness briefly before he falls behind and is put down. Buck sees how little room the trail gives to a working dog who can no longer pull."
+      },
+      {
+        "label": "Chapter V",
+        "title": "The Toil of Trace and Trail",
+        "summary": "Exhausted dogs pass into the hands of Hal, Charles, and Mercedes, inexperienced travelers who overload the sled, mismanage food, and argue instead of learning from the trail. The team weakens as their journey continues. Buck finally refuses to rise when Hal orders him onward.\n\nJohn Thornton cuts Buck free as Hal beats him. The others drive onto thawing river ice; it breaks, swallowing them and the team. Buck survives because someone recognizes the danger and refuses to treat his exhaustion as disobedience."
+      },
+      {
+        "label": "Chapter VI",
+        "title": "For the Love of a Man",
+        "summary": "With Thornton, Buck recovers and forms a bond unlike the obedience demanded by earlier owners. He protects Thornton in a saloon fight and leaps into dangerous water to save him. Thornton trusts him, and Buck responds with affection as fierce as his strength.\n\nAt Dawson, Thornton bets that Buck can pull a sled carrying a thousand pounds. Buck succeeds, earning money that lets Thornton pursue a new expedition. His power now serves a person he loves, even while the forest continues to draw his attention."
+      },
+      {
+        "label": "Chapter VII",
+        "title": "The Sounding of the Call",
+        "summary": "Thornton and his partners search for a lost gold mine while Buck spends longer periods wandering, hunting, and meeting a wolf. He returns because of Thornton, but finds the camp attacked by Yeehat warriors and Thornton dead. Buck drives off the attackers in grief and rage.\n\nWith that last human tie broken, Buck joins the wolves. The novel ends by placing him in the wilderness he has been approaching throughout the journey, a figure remembered in stories told by people who fear the valley where he now runs."
+      }
+    ]
+  },
+  "101": {
+    "source": "https://www.gutenberg.org/ebooks/35",
+    "mirror": "https://github.com/GITenberg/The-Time-Machine_35/blob/master/35-0.txt",
+    "source_sha256": "0eb70818a4c7e2e04f91be807bad37ca5c1475cd51cec2a7b620c4db2b595ce4",
+    "deck": "A journey to the distant future turns a dazzling technological idea into a warning about humanity.",
+    "overview": [
+      "An inventor tells his dinner guests that time can be traveled like a fourth dimension.",
+      "His account of the Eloi and Morlocks tests easy assumptions about progress and class."
+    ],
+    "takeaways": [
+      "The beautiful surface of the future conceals dependence and danger.",
+      "The traveler repeatedly revises his theories as new evidence appears.",
+      "The far future gives the story a scale larger than any one society."
+    ],
+    "sections": [
+      {
+        "label": "Chapter I",
+        "title": "Introduction",
+        "summary": "At dinner, the Time Traveller argues that time is a fourth dimension and that movement through it should be possible. His guests question the idea, but he treats their objections as problems of habit rather than proof that he is wrong.\n\nHe distinguishes ordinary experience of time from a machine that might direct that experience. The conversation is framed through a skeptical narrator, so the reader hears the theory before any extraordinary event can confirm it."
+      },
+      {
+        "label": "Chapter II",
+        "title": "The Machine",
+        "summary": "The Time Traveller demonstrates a small model to his guests. When he presses its controls, the model disappears, leaving the group to debate whether it has truly moved through time or has been hidden by a trick.\n\nHe then shows them a larger machine under construction. His confidence is clear, but the witnesses remain uncertain. The chapter turns an abstract claim into a physical invention without yet asking anyone to accept his later story."
+      },
+      {
+        "label": "Chapter III",
+        "title": "The Time Traveller Returns",
+        "summary": "The narrator and other guests return for another dinner and find their host absent. He arrives late, dirty, injured, and visibly shaken, then insists on washing and eating before he tells them where he has been.\n\nHis condition is the first evidence that something beyond a dinner-table demonstration has happened. The guests listen as he begins an account that sounds impossible even to people who saw the model vanish. His account begins only after he has eaten and gathered himself, which makes the dinner guests wait for an explanation."
+      },
+      {
+        "label": "Chapter IV",
+        "title": "Time Travelling",
+        "summary": "The Time Traveller describes sitting in the full-size machine and moving forward so fast that days and seasons blur around him. He stops in the year 802,701, near a large white sphinx and strange buildings under a warm sky.\n\nSmall, graceful people approach him without fear. He initially reads their delicate appearance as a sign that future humanity has escaped the struggles of his own age, an interpretation the rest of the journey will challenge."
+      },
+      {
+        "label": "Chapter V",
+        "title": "In the Golden Age",
+        "summary": "The traveler joins the Eloi, who live among impressive but decaying buildings. They are friendly and beautiful, yet seem childlike, easily tired, and uninterested in sustained thought or work. He struggles to learn their language.\n\nThe apparent ease of their world puzzles him. Abundance seems to have made effort unnecessary, but the ruins and the Eloi’s lack of curiosity suggest that a comfortable surface is not the whole story of the future."
+      },
+      {
+        "label": "Chapter VI",
+        "title": "The Sunset of Mankind",
+        "summary": "The traveler begins explaining the Eloi through a theory of human progress: perhaps centuries of safety and wealth removed the need for strength or intelligence. He notices that the landscape has been extensively shaped and that many structures are abandoned.\n\nHis account sounds plausible to him, but he admits it is only a first explanation. Wells lets the traveler’s confidence reveal how readily a visitor can make a tidy theory from incomplete evidence."
+      },
+      {
+        "label": "Chapter VII",
+        "title": "A Sudden Shock",
+        "summary": "The Time Machine disappears from the place where the traveler left it. Marks near the white sphinx point toward a hidden doorway, and he fears he may be trapped. He also notices dark underground openings and the Eloi’s unease after sunset.\n\nHe rescues an Eloi woman named Weena from drowning; she becomes his companion. His search for the machine now has two pressures: he must understand the hidden world below, and he must keep himself and Weena safe at night."
+      },
+      {
+        "label": "Chapter VIII",
+        "title": "Explanation",
+        "summary": "The traveler encounters pale, light-sensitive Morlocks and realizes that the future has two human descendants. He revises his theory: the Eloi may descend from a leisure class, while the Morlocks, who maintain machinery underground, descend from workers.\n\nThe apparent paradise depends on labor that its surface dwellers scarcely notice. The traveler’s sympathy for Weena grows, but his discovery also makes him fear that the relationship between the two groups is darker than a simple division of work."
+      },
+      {
+        "label": "Chapter IX",
+        "title": "The Morlocks",
+        "summary": "The traveler descends into a shaft to learn what the Morlocks do beneath the ground. In the darkness he sees machines and faces that unsettle him. They crowd toward him, and his supply of matches becomes a fragile defense.\n\nHe escapes back into daylight and begins to suspect that the Morlocks prey upon the Eloi. His expedition has replaced wonder with urgency: recovering the machine will require confronting those who control the hidden spaces around it."
+      },
+      {
+        "label": "Chapter X",
+        "title": "When Night Came",
+        "summary": "Knowing the Morlocks are more dangerous after dark, the traveler plans a route with Weena toward a distant building he hopes will offer supplies. Their journey exposes how vulnerable she is outside the familiar world of the Eloi.\n\nHe hopes to find fire, tools, and a place where they can rest before returning to the sphinx. His practical plans are repeatedly shaped by his fear of darkness and by his determination to bring Weena home with him."
+      },
+      {
+        "label": "Chapter XI",
+        "title": "The Palace of Green Porcelain",
+        "summary": "The distant palace proves to be a ruined museum. The traveler searches its broken displays and finds a bar of iron, matches, and materials that can help him make fire. Relics of earlier knowledge are useful even though their institution has collapsed.\n\nHe and Weena leave before night, carrying the few objects that might let them reach the sphinx. The museum shows a future littered with the remains of human achievement but unable to preserve the understanding behind it."
+      },
+      {
+        "label": "Chapter XII",
+        "title": "In the Darkness",
+        "summary": "The traveler and Weena enter the woods as night falls. Morlocks surround them; he uses fire and his iron bar to resist. The flames spread beyond his control, turning the forest into a dangerous blaze.\n\nBy morning he survives, but Weena is gone. He cannot rescue her and must continue alone. The chapter makes the cost of his struggle concrete: even the tools that protect him can create a disaster he cannot reverse."
+      },
+      {
+        "label": "Chapter XIII",
+        "title": "The Trap of the White Sphinx",
+        "summary": "Back at the sphinx, the traveler finds its pedestal open and his machine inside. He understands that the Morlocks have set a trap. He enters anyway, fights off their grasping hands, and restores the machine’s controls in time to escape.\n\nThe contest is brief but decisive. Having learned to distrust the future’s calm appearance, he survives by acting on the evidence before him rather than on his earlier hopeful theory."
+      },
+      {
+        "label": "Chapter XIV",
+        "title": "The Further Vision",
+        "summary": "Instead of stopping in his own century, the traveler moves much farther forward. He sees an enormous red sun, a bleak shore, and strange creatures beneath a dying sky. Human societies and their conflicts have vanished from view.\n\nThe journey becomes a vision of planetary time rather than social change. Frightened and weakened, he turns the machine back, carrying an experience far larger than the original dinner-table argument about the fourth dimension."
+      },
+      {
+        "label": "Chapter XV",
+        "title": "The Time Traveller’s Return",
+        "summary": "The traveler reaches his laboratory and finds the familiar world almost unchanged. He is exhausted, and the machine bears signs of its journey. His return brings the narrative back to the dinner guests who have been waiting for an explanation.\n\nHe finishes the story after eating and recovering enough to speak. The ordinary room now seems strange to him, while his listeners must decide what weight to give an account they cannot independently verify."
+      },
+      {
+        "label": "Chapter XVI",
+        "title": "After the Story",
+        "summary": "The guests debate the traveler’s account, and the narrator considers the flowers he brought from the future. The Time Traveller soon sets out again, promising to return with further proof, but he disappears and does not come back.\n\nThe frame story ends without a final demonstration. What remains is the narrator’s uncertainty and the possibility that the flowers, however small, are evidence of a world no one else has seen."
+      }
+    ]
+  },
+  "102": {
+    "source": "https://www.gutenberg.org/ebooks/289",
+    "mirror": "https://github.com/GITenberg/The-Wind-in-the-Willows_289/blob/master/289-0.txt",
+    "source_sha256": "f875d0ae7c153741c516d4db2f3c1686f8dd79e341ea27dbc2167178a09cd587",
+    "deck": "Four friends find adventure, trouble, and a durable home along the river.",
+    "overview": [
+      "Mole discovers the River Bank through Rat, while Toad’s enthusiasms repeatedly put everyone at risk.",
+      "The book moves between comic mishaps and quieter moments of belonging, friendship, and wonder."
+    ],
+    "takeaways": [
+      "Rat, Mole, Badger, and Toad show different ways of caring for a place and one another.",
+      "Toad’s adventures are funny because his confidence so often outruns his judgment.",
+      "Home is both a place to return to and a relationship sustained by friends."
+    ],
+    "sections": [
+      {
+        "label": "Chapter I",
+        "title": "The River Bank",
+        "summary": "Mole abandons his spring cleaning and emerges into the sunlight. He meets Water Rat, who takes him boating and introduces him to the rhythms and pleasures of the river. Mole’s curiosity makes an ordinary day feel like the beginning of a new life.\n\nRat teaches him to row, feeds him, and welcomes him into a world of small rituals. Their friendship begins without a grand quest; the river itself supplies enough discovery for Mole to want to stay."
+      },
+      {
+        "label": "Chapter II",
+        "title": "The Open Road",
+        "summary": "Rat and Mole visit the wealthy, restless Toad, who has become obsessed with a horse-drawn caravan. He persuades them to travel with him, but a passing motor-car wrecks the caravan and immediately captures Toad’s attention.\n\nToad abandons one passion for another. Rat sees how dangerous this new enthusiasm may become, while Toad orders a costly motor-car as soon as he can. The journey teaches the friends less about the road than about Toad’s impulsiveness."
+      },
+      {
+        "label": "Chapter III",
+        "title": "The Wild Wood",
+        "summary": "Mole ventures alone into the Wild Wood hoping to meet Badger. As night falls, the trees and watching eyes frighten him, and he loses his way in the snow. Rat comes searching and refuses to leave him behind.\n\nThe two find shelter at Badger’s door. Mole’s adventure strips away the easy confidence of the river, while Rat’s rescue shows how friendship works when curiosity becomes danger. The shift from the familiar river to the woods makes Mole’s curiosity feel suddenly dangerous."
+      },
+      {
+        "label": "Chapter IV",
+        "title": "Mr. Badger",
+        "summary": "Badger takes Mole and Rat in, gives them food and warmth, and hears about Toad’s motor-car trouble. He promises to help curb Toad’s reckless habits. The Wild Wood, frightening from outside, contains a home built on steadiness and care.\n\nBadger also tells Mole about the people who once occupied the land and left it behind. His account places the animals’ lives within a longer history and makes their familiar paths feel both secure and changeable."
+      },
+      {
+        "label": "Chapter V",
+        "title": "Dulce Domum",
+        "summary": "On the way home, Mole catches the scent of his own old burrow and becomes overwhelmed by longing. Rat recognizes the feeling and turns back with him. The little house is dusty and bare after Mole’s absence, but the friends make it welcoming again.\n\nThey prepare a meal and greet young field mice who come caroling outside. Mole’s return does not cancel his new river life; it lets him see that an old home and a new friendship can both belong to him."
+      },
+      {
+        "label": "Chapter VI",
+        "title": "Mr. Toad",
+        "summary": "Badger, Rat, and Mole confront Toad about his reckless driving and try to keep him at Toad Hall. Toad escapes their watch, takes another motor-car without permission, and is arrested after a wild ride.\n\nHis charm and confidence cannot talk him out of the consequences. The court sends him to prison, ending one kind of freedom and setting up an even more elaborate series of escapes. Toad’s friends hope the shock will interrupt a habit he keeps mistaking for freedom."
+      },
+      {
+        "label": "Chapter VII",
+        "title": "The Piper at the Gates of Dawn",
+        "summary": "Rat and Mole search the river at night for Portly, the otter’s missing child. Their journey leads them to a quiet island where they glimpse a mysterious, protective presence and find Portly safe.\n\nThe chapter pauses the comedy to make the river feel sacred and strange. As morning comes, the animals keep the feeling of the encounter even though its details begin to fade. The chapter pauses the larger adventures for an encounter that the animals struggle to describe."
+      },
+      {
+        "label": "Chapter VIII",
+        "title": "Toad’s Adventures",
+        "summary": "In prison, Toad wins the sympathy of a jailer’s daughter and escapes disguised as a washerwoman. He makes his way onto a train, narrowly evades pursuit, and finds himself free but hungry and far from home.\n\nThe disguise works only while Toad can keep his pride quiet. His escape depends on the help of others and on quick improvisation, qualities he will need again before he reaches the river. His confidence returns as soon as he sees a chance to regain the wheel."
+      },
+      {
+        "label": "Chapter IX",
+        "title": "Wayfarers All",
+        "summary": "Rat listens to a migrating sea rat and becomes captivated by distant ports and a life of constant travel. For a time the pull of the open world nearly overcomes his attachment to the river bank.\n\nMole sees his friend’s distress and gently brings him back to his own home and work. The episode gives Rat a temptation as powerful as Toad’s, but quieter: the desire to leave a beloved place for every place he has not seen."
+      },
+      {
+        "label": "Chapter X",
+        "title": "The Further Adventures of Toad",
+        "summary": "Toad’s journey home continues through mishaps on a barge, a stolen horse, and another encounter with a motor-car. He is repeatedly rescued by luck and then undone by his own boasting.\n\nAt last he reaches the river and finds Rat. The adventures have not yet made Toad humble, but they have brought him close enough to hear what has happened to his home in his absence. Even after his escape, his pride keeps turning simple travel into another risky performance."
+      },
+      {
+        "label": "Chapter XI",
+        "title": "Like Summer Tempests Came His Tears",
+        "summary": "Rat tells Toad that stoats and weasels have taken over Toad Hall. Toad’s outrage soon gives way to despair, and Badger and Mole return with a plan to enter through a secret passage.\n\nThe friends prepare carefully, while Toad keeps imagining himself the hero of the story. Reclaiming the house will require him to follow other people’s judgment rather than rush toward another performance. Toad’s return brings the story back to the home and friendships his adventures disrupted."
+      },
+      {
+        "label": "Chapter XII",
+        "title": "The Return of Ulysses",
+        "summary": "Badger leads Rat, Mole, and Toad through the passage into Toad Hall. They surprise the occupiers and drive them out. A feast follows, but the friends insist that Toad speak modestly and recognize their help.\n\nToad tries to restrain his vanity, at least for the moment. The book ends with the friends together in a restored home, balancing the pleasures of adventure with the steadier work of belonging. The ending restores everyday life beside the river after the disorder of Toad’s escapades."
+      }
+    ]
+  },
+  "103": {
+    "source": "https://www.gutenberg.org/ebooks/14522",
+    "mirror": "https://github.com/GITenberg/The-Canterville-Ghost_14522/blob/master/14522-8.txt",
+    "source_sha256": "1b5c51cc45679194dc4108dbfdac1606088233dfd147bbfbd80bec0658961a67",
+    "deck": "An American family treats an English haunting as a household inconvenience—until one daughter listens.",
+    "overview": [
+      "The Otis family buys Canterville Chase despite warnings about its ghost.",
+      "Their practical jokes defeat his theatrical scares, but Virginia discovers a sorrow the others have missed."
+    ],
+    "takeaways": [
+      "The story uses the family’s pragmatism to satirize old ghost-story conventions.",
+      "Virginia’s compassion succeeds where ridicule and fear do not.",
+      "The ghost’s release gives the comedy an unexpectedly gentle ending."
+    ],
+    "sections": [
+      {
+        "label": "Chapter I",
+        "title": "A haunted purchase",
+        "summary": "American minister Hiram Otis buys Canterville Chase even after Lord Canterville warns him that the house is haunted. The Otis family arrives and meets the housekeeper, who shows them an old bloodstain in the library.\n\nRather than accept the stain as a fearful sign, the family sets about cleaning it. Their matter-of-fact response unsettles the expected rules of a ghost story before the ghost himself appears. The opening places the American family’s practical confidence against the house’s much older traditions."
+      },
+      {
+        "label": "Chapter II",
+        "title": "The ghost meets the family",
+        "summary": "The bloodstain returns in new colors, frustrating the family’s attempts to remove it. When the ghost rattles his chains at night, Mr. Otis offers him oil to stop the noise. The twins answer his scares with practical tricks of their own.\n\nFor the ghost, centuries of successful haunting are suddenly useless. He feels insulted that his performance is treated as a nuisance rather than a terror and begins planning a more impressive revenge."
+      },
+      {
+        "label": "Chapter III",
+        "title": "A failed campaign",
+        "summary": "The ghost prepares elaborate appearances, but the family repeatedly defeats or ignores them. A false ghost built by the twins frightens him in turn. The legend of Canterville Chase has met a household that refuses to play its assigned part.\n\nHis anger becomes mixed with embarrassment and fear. What had seemed a simple contest between a ghost and new owners starts to expose how isolated the ghost has become in his own home."
+      },
+      {
+        "label": "Chapter IV",
+        "title": "The exhausted performer",
+        "summary": "Weeks of failed scares leave the ghost weak and miserable. He tries new disguises, but the twins continue to make the corridors dangerous for him. Even a planned appearance before a visiting duke is abandoned when the ghost cannot face another humiliation.\n\nThe comic reversals become more pointed as his confidence collapses. He has a long history of frightening others, yet now cannot sleep peacefully or carry out the role by which he understands himself."
+      },
+      {
+        "label": "Chapter V",
+        "title": "Virginia listens",
+        "summary": "Virginia finds the ghost alone and speaks to him without mockery. He tells her of his weariness and of a prophecy that may allow him to rest. She chooses to help, even though the path he shows her is frightening.\n\nThe hidden doorway closes behind them. Where her family tried cleaning, oil, and tricks, Virginia offers attention to a person whose suffering has been obscured by his theatrical reputation. Virginia’s willingness to listen gives the ghost something the family’s jokes and cleaning products could not."
+      },
+      {
+        "label": "Chapter VI",
+        "title": "The hidden chamber",
+        "summary": "Virginia disappears, and the family searches the house in growing alarm. She returns after passing through the ghost’s secret realm, carrying a box of jewels and leading them to a chamber with his remains.\n\nShe explains that she prayed for him and helped him find peace. Her return changes the family’s understanding of the haunting: the ghost’s freedom depended on compassion, not on defeating him. The family’s alarm also reveals that Virginia’s compassion has carried a real cost for her."
+      },
+      {
+        "label": "Chapter VII",
+        "title": "A quiet ending",
+        "summary": "The family gives the ghost a funeral, and Canterville Chase is finally at rest. Virginia later marries the young duke who had cared for her, but she keeps the details of her encounter with the ghost private.\n\nThe closing conversation suggests that the experience taught her something about life, death, and love that she cannot fully put into words. The farce ends with a mystery treated respectfully rather than explained away."
+      }
+    ]
   }
 }
