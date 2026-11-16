@@ -1,0 +1,14 @@
+.guides-shelf { margin-top: 3.5rem; }
+.guides-shelf-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.3rem; }
+.guides-shelf-heading h2 { margin: .4rem 0 0; font: 600 clamp(1.9rem, 3vw, 2.5rem)/1.1 Georgia, serif; letter-spacing: -.025em; }
+.guides-shelf-heading p { max-width: 30ch; margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.guides-shelf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+.guide-shelf-card { min-height: 200px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.3rem; background: var(--blue-wash); border: 1px solid var(--line); border-radius: 7px; color: var(--ink); text-decoration: none; transition: transform .16s ease, background .16s ease; }
+.guide-shelf-card:nth-child(2n) { background: var(--blue-wash-strong); border-color: var(--line); }
+.guide-shelf-card:hover { transform: translateY(-3px); background: var(--blue-wash-strong); }
+.guide-shelf-number { font-size: .73rem; letter-spacing: .13em; font-weight: 800; color: var(--blue); }
+.guide-shelf-card h3 { font: 600 1.35rem/1.18 Georgia, serif; margin: 1.2rem 0 .3rem; }
+.guide-shelf-card p { margin: 0; font-size: .82rem; color: var(--muted); }
+.guide-shelf-link { display: flex; justify-content: space-between; margin-top: 1.2rem; font-size: .8rem; font-weight: 800; }
+@media (max-width: 700px) { .guides-shelf-heading { display: block; } .guides-shelf-heading p { margin-top: .7rem; } .guides-shelf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 440px) { .guides-shelf-grid { grid-template-columns: 1fr; } .guide-shelf-card { min-height: 160px; } }
