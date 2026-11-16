@@ -21,10 +21,13 @@ button, input { font-family: inherit; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 .home-page { max-width: 1200px; margin: 0 auto; padding: 0 2rem 5rem; }
 .library-intro { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--line); }
+.library-intro--searching { padding-bottom: 2rem; }
 .eyebrow { color: var(--blue); font-size: .75rem; font-weight: 700; letter-spacing: .17em; }
 .library-intro h1 { max-width: 780px; margin: .65rem 0 .8rem; font: 600 clamp(2.4rem, 5vw, 4.5rem)/1.05 Georgia, serif; letter-spacing: -.035em; }
 .library-intro p { max-width: 600px; margin: 0; color: var(--muted); font-size: 1.12rem; line-height: 1.5; }
 .catalog { margin-top: 3rem; }
+.catalog--searching { margin-top: 1.6rem; }
+.catalog--searching .book-grid { margin-top: 1.3rem; }
 .catalog-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .catalog-heading h2 { margin: 0; font: 600 clamp(1.8rem, 3vw, 2.5rem)/1.15 Georgia, serif; }
 .catalog-heading p { margin: 0; color: var(--muted); }

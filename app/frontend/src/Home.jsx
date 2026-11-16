@@ -18,7 +18,9 @@ export default function Home() {
     const [error, setError] = useState(false);
     const { progress } = useLibrary();
     const { filteredBooks, handleFilter } = useFilteredBooks(books, popularCategories);
-    const { searchQuery, searchResults, handleSearch } = useSearchBooks(filteredBooks);
+    const { searchQuery, searchResults, handleSearch } = useSearchBooks(books);
+    const searching = searchQuery.trim().length > 0;
+    const visibleBooks = searching ? searchResults : filteredBooks;
 
     useEffect(() => {
         const controller = new AbortController();
@@ -37,24 +39,24 @@ export default function Home() {
         <>
             <Navbar />
             <main className="home-page" id="main-content">
-                <section className="library-intro">
+                <section className={`library-intro${searching ? ' library-intro--searching' : ''}`}>
                     <span className="eyebrow">THE LIBRARY</span>
                     <h1>A good book, in a little time.</h1>
                     <p>Explore source-checked reading guides, listen along, and find what to open next.</p>
                     <SearchBar query={searchQuery} onSearch={handleSearch} />
                 </section>
-                {!error && !loading && <ContinueReading books={books} progress={progress} />}
-                {!error && !loading && <GuidesShelf books={books} />}
-                {!error && !loading && <Recommendations books={books} progress={progress} />}
-                <section className="catalog" aria-labelledby="catalog-title">
+                {!searching && !error && !loading && <ContinueReading books={books} progress={progress} />}
+                {!searching && !error && !loading && <GuidesShelf books={books} />}
+                {!searching && !error && !loading && <Recommendations books={books} progress={progress} />}
+                <section className={`catalog${searching ? ' catalog--searching' : ''}`} aria-labelledby="catalog-title">
                     <div className="catalog-heading">
-                        <h2 id="catalog-title">Explore books</h2>
-                        {!loading && !error && <p aria-live="polite">{searchResults.length} book{searchResults.length === 1 ? '' : 's'}</p>}
+                        <h2 id="catalog-title">{searching ? 'Search results' : 'Explore books'}</h2>
+                        {!loading && !error && <p aria-live="polite">{visibleBooks.length} book{visibleBooks.length === 1 ? '' : 's'}</p>}
                     </div>
-                    <Filters onFilter={handleFilter} />
+                    {!searching && <Filters onFilter={handleFilter} />}
                     {loading ? <p className="status-message">Loading books…</p> :
                         error ? <p className="status-message">Books could not be loaded. Please try again later.</p> :
-                        <BooksGrid books={searchResults} />}
+                        <BooksGrid books={visibleBooks} emptyMessage={searching ? `No books found for “${searchQuery.trim()}”. Try a title, author, or subject.` : undefined} />}
                 </section>
             </main>
         </>

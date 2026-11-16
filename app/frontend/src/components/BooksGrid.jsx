@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import BookCover from './BookCover';
 import '../styles/BooksGrid.css';
 
-export default function BooksGrid({ books }) {
+export default function BooksGrid({ books, emptyMessage = 'No books match these filters. Try another search or subject.' }) {
     if (books.length === 0) {
-        return <p className="empty-state">No books match these filters. Try another search or subject.</p>;
+        return <p className="empty-state">{emptyMessage}</p>;
     }
 
     return (
