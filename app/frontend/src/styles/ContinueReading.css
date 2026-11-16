@@ -1,0 +1,9 @@
+.continue-reading { margin: 2.5rem 0; }
+.continue-reading h2 { font: 600 1.6rem/1.2 Georgia, serif; margin: 0 0 1rem; }
+.continue-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .8rem; }
+.continue-card { display: grid; gap: .7rem; padding: 1rem; background: #fff; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); text-decoration: none; }
+.continue-card:hover { border-color: var(--blue); }
+.continue-card strong { font: 600 1.1rem/1.25 Georgia, serif; }
+.continue-card > span:not(.progress-track) { color: var(--muted); font-size: .84rem; }
+.progress-track { display: block; height: 5px; background: var(--blue-wash-strong); border-radius: 5px; overflow: hidden; }
+.progress-track span { display: block; height: 100%; background: var(--blue); }

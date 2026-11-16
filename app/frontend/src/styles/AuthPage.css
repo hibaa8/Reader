@@ -1,0 +1,15 @@
+.auth-page { min-height: calc(100vh - 72px); display: grid; place-items: start center; padding: 4rem 1rem; }
+.auth-card { width: min(100%, 460px); padding: 2.5rem; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.auth-card h1 { font: 600 2.4rem/1.1 Georgia, serif; margin: .7rem 0; }
+.auth-card > p { color: var(--muted); line-height: 1.5; }
+.auth-card form { display: grid; gap: 1rem; margin-top: 2rem; }
+.auth-card label { display: grid; gap: .4rem; font-size: .9rem; font-weight: 700; }
+.auth-card input { min-height: 46px; width: 100%; padding: .7rem .8rem; border: 1px solid var(--line-strong); border-radius: 5px; font: inherit; }
+.auth-card input:focus { outline: 2px solid var(--blue); outline-offset: 2px; }
+.auth-card small { color: var(--muted); margin-top: -.7rem; }
+.auth-card form button { min-height: 46px; margin-top: .3rem; border: 0; border-radius: 5px; background: var(--blue); color: white; cursor: pointer; font: 700 .95rem Arial, sans-serif; }
+.auth-card form button:disabled { opacity: .6; cursor: wait; }
+.auth-error { padding: .7rem; margin: 0; color: var(--black); background: var(--blue-wash); border-radius: 4px; font-size: .9rem; }
+.auth-switch { margin: 1.5rem 0 0; font-size: .9rem; }
+.auth-switch a { color: var(--blue); font-weight: 700; }
+@media(max-width:500px) { .auth-page { padding: 1.5rem 1rem; } .auth-card { padding: 1.5rem; } }
