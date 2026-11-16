@@ -1,7 +1,6 @@
 import os
 from flask import request, Blueprint, send_from_directory
 from .database.db_handler import DatabaseHandler
-import os
 
 db_handler = DatabaseHandler()
 routes = Blueprint('views', __name__)
@@ -11,7 +10,9 @@ routes = Blueprint('views', __name__)
 def serve_react(path):
     base_dir = os.path.abspath(os.path.dirname(__file__))
     react_build_dir = os.path.join(base_dir, "../frontend/build")
-    if path != "" and os.path.exists(os.path.join(react_build_dir, path)):
+    if path.startswith('api/'):
+        return {"error": "Not found"}, 404
+    if path != "" and os.path.isfile(os.path.join(react_build_dir, path)):
         return send_from_directory(react_build_dir, path)
     else:
         return send_from_directory(react_build_dir, "index.html")

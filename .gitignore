@@ -2,6 +2,14 @@
 app/backend/.env
 app/backend/__pycache__/
 app/backend/venv
+.venv/
+**/__pycache__/
+*.py[cod]
+*.db-journal
+*.db-wal
+*.db-shm
+app/backend/instance/users.db
+app/backend/instance/.secret_key
 app/backend/lib/
 app/backend/bin/
 app/backend/services/__pycache__/*

@@ -1,5 +1,5 @@
-from backend.app import create_app
-from database import db
+from ..app import create_app
+from . import db
 
 app = create_app()
 
