@@ -70,7 +70,7 @@ class AuthAndProgressTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json[0]['percent'], 60)
 
-    def test_source_guides_and_archive_labels(self):
+    def test_source_guides_and_overviews(self):
         expected = {10: (11, 12), 23: (46, 5), 16: (64317, 9), 29: (43, 10), 28: (844, 3), 24: (2542, 3),
                     100: (215, 7), 101: (35, 16), 102: (289, 12), 103: (14522, 7)}
         listed = {book['id']: book for book in self.client.get('/api/books').json}
@@ -95,6 +95,21 @@ class AuthAndProgressTests(unittest.TestCase):
                 self.assertEqual(book['guide']['kind'], 'overview')
                 self.assertGreaterEqual(len(book['guide']['sections']), 3)
                 self.assertFalse(book['summary_reviewed'])
+
+    def test_every_catalog_book_has_a_substantive_summary(self):
+        catalog = self.client.get('/api/books').json
+        self.assertEqual(len(catalog), 103)
+        for entry in catalog:
+            with self.subTest(book_id=entry['id'], title=entry['title']):
+                response = self.client.get(f"/api/books/{entry['id']}")
+                self.assertEqual(response.status_code, 200)
+                guide = response.json['guide']
+                self.assertIsNotNone(guide)
+                self.assertTrue(guide['deck'].strip())
+                self.assertTrue(guide['sections'])
+                self.assertTrue(all(section['title'].strip() and section['summary'].strip()
+                                    for section in guide['sections']))
+                self.assertGreaterEqual(sum(len(section['summary'].split()) for section in guide['sections']), 200)
 
 
 if __name__ == '__main__':
