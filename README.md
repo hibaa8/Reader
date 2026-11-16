@@ -1,83 +1,71 @@
-# **Book Reader**
+# Book Reader
 
-A full-stack web application that enables users to browse books, view detailed summaries, and filter books by categories. Summaries are generated using generative AI models, providing engaging and insightful content.
+Book Reader is a Flask and React app for browsing 99 bundled Project Gutenberg books. Six featured books have new, source-aligned reading guides with a quick take, chapter or act summaries, context, and key ideas. The remaining catalog entries retain their older summaries, clearly labeled as archive content. Search by title, author, language, or subject; filter by subject; and open a book for its guide or summary. Save reading progress, get recommendations from completed books and substantial reading, and listen with voice, speed, and section controls. The app can run without an API key after dependencies are installed, though cover images, source links, and Amazon links require internet access.
 
----
+Anonymous reading history is stored in this browser's local storage. Signing up imports it into a private account database and makes progress available on other devices when the same server is deployed. Narration uses voices supplied by the browser and operating system; availability and voice quality vary. The player reads summary text aloud and does not record microphone audio. When a remote cover image is unavailable, the app displays a text cover instead.
 
-## **Features**
+The six source-aligned guides cover *Alice's Adventures in Wonderland* (12 chapters), *A Christmas Carol* (five staves), *The Great Gatsby* (nine chapters), *The Strange Case of Dr. Jekyll and Mr. Hyde* (ten chapters), *The Importance of Being Earnest* (three acts), and *A Doll's House* (three acts). The four newly fetched sources came from GITenberg's mirrors of Project Gutenberg texts because Gutenberg's direct text endpoint returned HTTP 503 during this update. Each guide links to its Gutenberg edition, and the new source records include the mirror URL and SHA-256 of the text reviewed. The summaries are paraphrases, not extracts. The remaining 93 summaries are pre-existing generated text and have not been rechecked. Guide data lives in `app/backend/data/reading_guides.json`; the bundled catalog database is not modified.
 
-- **Book Browsing**: View books in a responsive grid layout with images, titles, and authors.
-- **Web Scraping**: 
-  - Scraped the Amazon website to retrieve product URLs for books.
-  - Scraped Project Gutenberg for metadata and full book text.
-- **AI-Powered Summaries**: Generate detailed summaries for books using the Gemini 1.5 Flash model.
-- **Filters and Search**:
-  - Filter books by popular categories (e.g., Science Fiction, Romance).
-  - Search books by keywords including title, author, language, category, etc
-- **Book Details**: Click on any book to view its details, including language, category, image, and summary.
-- **Responsive Design**: Works seamlessly on desktop and mobile devices.
+## Requirements
 
----
+- Python 3.10 or newer
+- Node.js 20.19 or newer (or 22.12 or newer)
 
-## **Tech Stack**
+## Run locally
 
-### **Frontend**
-- React
-- CSS
+From the repository root, install backend dependencies in a virtual environment:
 
-### **Backend**
-- Flask
-- SQLite
-
-### **AI Integration**
-- **Generative AI (Gemini 1.5)**: 
-  - Summaries include detailed descriptions of each chapter/section and key takeaways at the end.
-  - **Prompt Engineering**: Designed a custom prompt to structure summaries logically and ensure readability and relevance.
-
----
-
-## **Installation**
-
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/hibaa8/Summarizer.git
-cd Summarizer
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r app/backend/requirements.txt
 ```
 
-### **2. Backend Setup**
+In one terminal, run the Flask API:
 
-Navigate to the backend directory:
-```bash
-cd app/backend
+```sh
+. .venv/bin/activate
+flask --app app.backend.app:create_app run
 ```
 
-Install the necessary requirements
-```bash
-pip install -r requirements.txt   
-```
+In another terminal, run the frontend development server:
 
-Run the Flask app:
-```bash
-flask run
-```
-
-### **3.Frontend Setup**
-
-Open a new terminal window and navigate to the frontend directory:
-```bash
+```sh
 cd app/frontend
-```
-
-Install dependencies:
-```bash
-npm install
-```
-
-Start the development server:
-```bash
+npm ci
 npm start
 ```
 
-### **View the App**
-Open your browser and navigate to: http://127.0.0.1:3000 
-(flask server should be running on port 5000)
+Open <http://127.0.0.1:5173>. Vite proxies `/api` to Flask on port 5000.
+
+Run the recommendation checks with `cd app/frontend && npm test`.
+Run account and API checks with `.venv/bin/python -m unittest discover -s app/backend/tests -v` from the repository root.
+
+## Build and serve
+
+```sh
+cd app/frontend
+npm ci
+npm run build
+cd ../..
+. .venv/bin/activate
+flask --app app.backend.app:create_app run
+```
+
+Open <http://127.0.0.1:5000>. Flask serves the built frontend from `app/frontend/build`. For a public deployment, run the Flask app behind a production WSGI server and HTTPS reverse proxy. Do not use Flask's development server as a public service.
+
+Account data is stored in `app/backend/instance/users.db`, separate from the committed book catalog. This file and the locally generated session-signing key are ignored by Git. Back them up if you need to preserve accounts. Set a stable, private `READER_SECRET_KEY` and `READER_SECURE_COOKIES=1` for an HTTPS deployment. Do not reuse a development secret. The current account flow does not include email verification or password reset; add those before inviting untrusted public signups.
+
+## API
+
+- `GET /api/books` lists books and metadata. Optional `subject` query parameter filters subjects.
+- `GET /api/books/<id>` returns a source-aligned `guide` for featured books or the older `summary` for archive entries; unknown IDs return JSON with HTTP 404. The catalog list includes `has_guide` so clients can distinguish them.
+- `GET /api/auth/me` returns the session user and a CSRF token. Account and progress mutations require that token in `X-CSRF-Token`.
+- `POST /api/auth/signup`, `/api/auth/login`, `/api/auth/logout` manage a signed session.
+- `GET /api/progress`, `PUT /api/progress/<id>`, and `POST /api/progress/import` store private reading progress.
+
+The bundled SQLite database is read by default and contains the book catalog and generated summaries. Summary HTML is sanitized before display. No credentials are required to browse the catalog.
+
+## Optional data generation
+
+`app/backend/scripts/add_summaries.py` is separate from the browsing app. It requires a `GEMINI_API_KEY` in `app/backend/.env` plus the optional packages noted in `app/backend/requirements.txt`. It makes requests to external services; review those services' terms and costs before running it. The generated summaries already bundled with this repository do not require this script.
