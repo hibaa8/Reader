@@ -1,10 +1,10 @@
 # Book Reader
 
-Book Reader is a Flask and React app for browsing 99 bundled Project Gutenberg books. Six featured books have new, source-aligned reading guides with a quick take, chapter or act summaries, context, and key ideas. The remaining catalog entries retain their older summaries, clearly labeled as archive content. Search by title, author, language, or subject; filter by subject; and open a book for its guide or summary. Save reading progress, get recommendations from completed books and substantial reading, and listen with voice, speed, and section controls. The app can run without an API key after dependencies are installed, though cover images, source links, and Amazon links require internet access.
+Book Reader is a Flask and React app for browsing 103 Project Gutenberg books. Ten featured books have source-aligned reading guides with a quick take, chapter or act summaries, and key ideas. The 88 usable older summaries now appear in the same sectional layout, labeled as unreviewed because their content has not been checked against the original books. Five catalog records contain no usable summary and are marked unavailable. Search by title, author, language, or subject; filter by subject; and open a book for its guide or summary. Save reading progress, get recommendations from completed books and substantial reading, and listen with voice, speed, and section controls. Catalog covers use genre colors. The app can run without an API key after dependencies are installed, though source links and Amazon links require internet access.
 
 Anonymous reading history is stored in this browser's local storage. Signing up imports it into a private account database and makes progress available on other devices when the same server is deployed. Narration uses voices supplied by the browser and operating system; availability and voice quality vary. The player reads summary text aloud and does not record microphone audio. When a remote cover image is unavailable, the app displays a text cover instead.
 
-The six source-aligned guides cover *Alice's Adventures in Wonderland* (12 chapters), *A Christmas Carol* (five staves), *The Great Gatsby* (nine chapters), *The Strange Case of Dr. Jekyll and Mr. Hyde* (ten chapters), *The Importance of Being Earnest* (three acts), and *A Doll's House* (three acts). The four newly fetched sources came from GITenberg's mirrors of Project Gutenberg texts because Gutenberg's direct text endpoint returned HTTP 503 during this update. Each guide links to its Gutenberg edition, and the new source records include the mirror URL and SHA-256 of the text reviewed. The summaries are paraphrases, not extracts. The remaining 93 summaries are pre-existing generated text and have not been rechecked. Guide data lives in `app/backend/data/reading_guides.json`; the bundled catalog database is not modified.
+The source-aligned guides cover *Alice's Adventures in Wonderland* (12 chapters), *A Christmas Carol* (five staves), *The Great Gatsby* (nine chapters), *The Strange Case of Dr. Jekyll and Mr. Hyde* (ten chapters), *The Importance of Being Earnest* (three acts), *A Doll's House* (three acts), *The Call of the Wild* (seven chapters), *The Time Machine* (16 chapters), *The Wind in the Willows* (12 chapters), and *The Canterville Ghost* (seven sections). The four newly fetched sources came from GITenberg's mirrors of Project Gutenberg texts because Gutenberg's direct text endpoint returned HTTP 503 during this update. Each guide links to its Gutenberg edition, and the new source records include the mirror URL and SHA-256 of the text reviewed. The summaries are paraphrases, not extracts. Guide data lives in `app/backend/data/reading_guides.json`; the four added catalog entries live in `app/backend/data/added_books.json`; the bundled catalog database is not modified.
 
 ## Requirements
 
@@ -59,12 +59,12 @@ Account data is stored in `app/backend/instance/users.db`, separate from the com
 ## API
 
 - `GET /api/books` lists books and metadata. Optional `subject` query parameter filters subjects.
-- `GET /api/books/<id>` returns a source-aligned `guide` for featured books or the older `summary` for archive entries; unknown IDs return JSON with HTTP 404. The catalog list includes `has_guide` so clients can distinguish them.
+- `GET /api/books/<id>` returns a `guide` for usable summaries, with `summary_reviewed` indicating source review; unknown IDs return JSON with HTTP 404. The catalog list includes `has_guide` to identify the ten source-aligned guides.
 - `GET /api/auth/me` returns the session user and a CSRF token. Account and progress mutations require that token in `X-CSRF-Token`.
 - `POST /api/auth/signup`, `/api/auth/login`, `/api/auth/logout` manage a signed session.
 - `GET /api/progress`, `PUT /api/progress/<id>`, and `POST /api/progress/import` store private reading progress.
 
-The bundled SQLite database is read by default and contains the book catalog and generated summaries. Summary HTML is sanitized before display. No credentials are required to browse the catalog.
+The bundled SQLite database is read by default and contains the original catalog and generated summaries. Older HTML is parsed into plain text on the server and escaped by React when displayed. No credentials are required to browse the catalog.
 
 ## Optional data generation
 
