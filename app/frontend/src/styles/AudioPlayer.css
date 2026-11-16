@@ -1,0 +1,9 @@
+.audio-player { margin-top: 1.5rem; padding: 1rem; background: var(--blue-wash); border-radius: 6px; max-width: 560px; }
+.audio-main { display: flex; flex-wrap: wrap; gap: .5rem; }
+.audio-main button { min-height: 44px; padding: .55rem .85rem; border: 1px solid var(--blue); border-radius: 5px; background: transparent; color: var(--blue); cursor: pointer; font: 700 .88rem Arial, sans-serif; }
+.audio-main .audio-primary { color: white; background: var(--blue); }
+.audio-player p { min-height: 1.2em; margin: .75rem 0; color: var(--muted); font-size: .84rem; line-height: 1.35; }
+.audio-options { display: flex; flex-wrap: wrap; gap: .8rem; }
+.audio-options label { display: grid; gap: .25rem; color: var(--navy); font-size: .8rem; font-weight: 700; }
+.audio-options select { min-height: 40px; max-width: 230px; border: 1px solid var(--line-strong); border-radius: 4px; background: #fff; color: var(--ink); font: inherit; }
+@media(max-width:600px) { .audio-options label:first-child, .audio-options label:first-child select { width: 100%; max-width: none; } }

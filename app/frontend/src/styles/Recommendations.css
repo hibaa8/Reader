@@ -1,0 +1,14 @@
+.recommendations { margin: 3rem 0; padding: 1.5rem 1.75rem; background: var(--blue-wash); border-radius: 8px; }
+.recommendations-empty { margin: 1.4rem 0 0; padding: .9rem 1.1rem; background: var(--blue-wash); border-left: 3px solid var(--blue); color: var(--navy); font-size: .92rem; }
+.recommendations-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
+.recommendations-heading h2 { margin: 0; font: 600 1.65rem/1.2 Georgia, serif; }
+.recommendations-heading p { margin: 0; color: var(--muted); font-size: .85rem; }
+.recommendations > p { margin: 1rem 0 0; line-height: 1.5; }
+.recommendations-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .75rem; margin-top: 1.2rem; }
+.recommendation-card { display: flex; flex-direction: column; gap: .45rem; padding: 1rem; min-height: 130px; background: #fff; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); text-decoration: none; transition: transform .15s ease, border-color .15s ease; }
+.recommendation-card:hover, .recommendation-card:focus-visible { border-color: var(--blue); transform: translateY(-2px); }
+.recommendation-card strong { font: 600 1.08rem/1.25 Georgia, serif; }
+.recommendation-card span { color: var(--muted); font-size: .88rem; }
+.recommendation-card small { margin-top: auto; color: var(--blue); font-weight: 700; }
+@media (max-width: 600px) { .recommendations { margin: 2rem 0; padding: 1.25rem; } .recommendations-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .recommendations-list { grid-template-columns: 1fr; } }
